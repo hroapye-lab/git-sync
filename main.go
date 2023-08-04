@@ -1726,7 +1726,7 @@ func (git *repoSync) currentWorktree() (worktree, error) {
 	if filepath.IsAbs(target) {
 		return worktree(target), nil
 	}
-	return worktree(git.root.Join(target)), nil
+	return worktree(git.link.Join(target)), nil
 }
 
 // SyncRepo syncs the repository to the desired ref, publishes it via the link,
